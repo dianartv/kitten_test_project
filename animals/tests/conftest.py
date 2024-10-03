@@ -12,7 +12,7 @@ pytestmark = pytest.mark.django_db
 @pytest.fixture(scope='session')
 def django_db_setup(django_db_blocker):
     with django_db_blocker.unblock():
-        call_command('loaddata', 'test_example_db_data.json')
+        call_command('loaddata', 'tests/test_example_db_data.json')
 
 
 @pytest.fixture
